@@ -40,7 +40,7 @@ const Signup = require('./models/signupModel');
 
 // routes
 app.use('/', home);
-app.use('/signup', signup);
+app.use('/', signup);
 
 // server port
 app.listen(3000, () => {
