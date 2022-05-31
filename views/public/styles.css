@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Poppins:wght@200;300;400;500&family=Red+Hat+Text:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    background: #fafafa;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+li a {
+    margin: 0 10px;
+    font-size: 18px;
+    color: #ff5a5f;
+}
+
+.main-content {
+    padding: 4rem 0;
+}
+
+.main-content h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.main-content p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    width: 45%;
+}
+
+.btn-container a {
+    font-size: 16px;
+}
+
+.btn {
+    background: #ff5a5f;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
