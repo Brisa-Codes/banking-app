@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/public/CSS/styles.css">
+</head>
+<body>
+   <div class="container">
+        <!--Header-->
+        <div class="header">
+            <div class="header-menu logo">BS</div>
+            <div class="header-menu">
+                <ul>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Payments</a></li>
+                </ul>
+            </div>
+            <div class="header-menu call-btn">
+                <ul>
+                    <li><a class="login-btn" href="">Login</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Sign Up Form-->
+        <div class="sign-up-wrapper signup-container">
+            <div class="signup-form">
+                <form method="POST" action="/signup">
+                    <label for="name">Name</label> <br>
+                    <input type="text" name="name"> <br>
+                    <label for="email">Email</label> <br>
+                    <input type="text" name="email"><br>
+                    <label for="password">Password</label> <br>
+                    <input type="password" name="password"> <br>
+                    <label for="password">Comfirm Password</label> <br>
+                    <input type="password" name="password"> <br>
+                    <button  class="submit-btn" type="submit">Sign Up</button>
+                </form>
+            </div>
+            <div class="signup-img">
+                <img src="/public/IMG/ibank.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+
+   </div>
+</body>
+</html>
