@@ -37,10 +37,14 @@ db.on('error', (err) => {
 const home = require('./routes/home');
 const signup = require('./routes/signup');
 const Signup = require('./models/signupModel');
+const dashboard = require('./routes/dashboard');
+const login = require('./routes/login');
 
 // routes
 app.use('/', home);
 app.use('/', signup);
+app.use('/', dashboard);
+app.use('/', login);
 
 // server port
 app.listen(3000, () => {
