@@ -36,7 +36,6 @@ db.on('error', (err) => {
 // importing routes
 const home = require('./routes/home');
 const signup = require('./routes/signup');
-const Signup = require('./models/signupModel');
 const dashboard = require('./routes/dashboard');
 const login = require('./routes/login');
 
