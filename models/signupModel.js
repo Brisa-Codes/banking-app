@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const passportLocalMongoose = require('passport-local-mongoose');
 
 // sign up schema
-const signupSchema = new mongoose.Schema({
+const signupSchema = mongoose.Schema({
     name: {
         type: String,
         required: true
