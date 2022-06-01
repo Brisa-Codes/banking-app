@@ -3,12 +3,12 @@ head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title Sign Up
+  title Sign Up || Banking System
   link(rel='stylesheet' href='/CSS/styles.css')
 .container
   // Header
   .header
-    .header-menu.logo BS
+    a(href='/') BS
     .header-menu
       ul
         li
@@ -20,11 +20,11 @@ head
     .header-menu.call-btn
       ul
         li
-          a.login-btn(href='') Login
+          a.login-btn(href='/login') Login
   // Sign Up Form
   .sign-up-wrapper.signup-container
     .signup-form
-      form(method='POST' action='/signup')
+      form(method='POST' action='/user/login')
         label(for='name') Name
         br
         input(type='text' name='name')
