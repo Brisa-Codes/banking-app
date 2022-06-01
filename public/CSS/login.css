@@ -1,0 +1,132 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper {
+  margin-top: 4rem;
+  width: 380px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .form-title {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+  background-image: linear-gradient(to right, #ff5a5f 0%, #ff5a5f 100%);
+}
+
+.wrapper form {
+  padding: 10px 30px 50px 30px;
+}
+
+.wrapper form .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.wrapper form .input-field input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 17px;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.wrapper form .input-field input:focus,
+.wrapper form .input-field input:valid {
+  border-color: #4158d0;
+}
+
+.wrapper form .input-field label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #999999;
+  font-weight: 400;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+form .input-field input:focus ~ label,
+form .input-field input:valid ~ label {
+  top: 0%;
+  font-size: 16px;
+  color: #4158d0;
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+form .input-content {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+form .input-content input {
+  width: 15px;
+  height: 15px;
+  background: red;
+}
+
+form .input-content label {
+  color: #262626;
+  user-select: none;
+  padding-left: 5px;
+}
+
+form .input-field input[type="submit"] {
+  color: #fff;
+  border: none;
+  padding-left: 0;
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #ff5a5f 0%, #ff5a5f 100%);
+  transition: all 0.3s ease;
+}
+
+form .input-field input[type="submit"]:active {
+  transform: scale(0.95);
+}
+
+form .input-field input[type="submit"]:hover {
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+
+form .forgot-password {
+    text-align: right;
+    margin-top: 15px;
+}
+form .register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+form .forgot-password a,
+form .register-link a {
+  color: #4158d0;
+  text-decoration: none;
+}
+
+form .input-content .forgot-password a:hover,
+form .register-link a:hover {
+  text-decoration: underline;
+}
