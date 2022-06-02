@@ -66,6 +66,12 @@ app.use(expressValidator({
   }
 }));
 
+//passport config folde
+require('./config/passport')(passport)
+//passport mIDDLEWARES
+app.use(passport.initialize())
+app.use(passport.session())
+
 // importing routes
 const home = require('./routes/home');
 const signup = require('./routes/signup');

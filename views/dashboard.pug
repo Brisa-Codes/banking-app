@@ -20,4 +20,14 @@ head
     .header-menu.call-btn
       ul
         li
-          a.signup-btn(href='/signup') Sign Up
+          a.signup-btn(href='/login') Logout
+  - const dashboardStyle = {'display': 'flex','flex-direction': 'column', 'align-items': 'center','justify-content': 'center', 'background': '#ccc', 'margin-right': '12rem', 'margin-left': '12rem'}
+  .dashboard(style=dashboardStyle) 
+    h3 Dashboard
+    .div
+      h3(style= 'text-align: center') 0
+      small(style= 'font-size: 14px') Current Balance
+    .div
+      - const btnStyle = {'outline': 'none', 'border': 'none', 'margin': '8px', 'width': '100px', 'height': '30px', 'background-color': '#ff5a5f', 'color': 'white', 'font-size': '15px', 'border-radius': '4px'}
+      button(style=btnStyle) Widthdraw 
+      button(style=btnStyle) Deposit
