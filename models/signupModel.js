@@ -17,10 +17,8 @@ const signupSchema = mongoose.Schema({
         required: true
     }
 });
-
 signupSchema.plugin(passportLocalMongoose, {
     usernameField: 'email'
 });
-
 // connect to mongoose
 const Signup = module.exports = mongoose.model('Signup', signupSchema);
