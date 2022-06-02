@@ -8,19 +8,16 @@ head
 body
   .wrapper
     .form-title Registration Form
-    form(action='/register', method='POST')
+    form(action='/signup', method='POST')
       .input-field
         input(type='text', name='username', required)
         label(for='username') Username
-      .input-field 
-        input(type='email', name='email', required)
-        label(for="email") Email 
       .input-field 
         input(type='password', name='password', required)
         label(for='password') Password
       .input-field
         input(type='password', name='password2', required)
-        label(for='password') Confirm password
+        label(for='password2') Confirm password
       .input-field
         input#submit(type='submit' value='Register')
       .text

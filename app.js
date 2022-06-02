@@ -3,6 +3,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const passport = require('passport');
+const session = require('express-session');
+const flash = require('connect-flash')
+const expressValidator = require('express-validator')
 const path = require('path');
 
 // db configuration
@@ -32,6 +35,36 @@ db.once('open', () => {
 db.on('error', (err) => {
     console.log(err);
 });
+
+//express - session
+app.use(session({
+    secret: 'dkfa;sdklfja',
+    resave: true,
+    saveUninitialized: true,
+}))
+//express - messages
+app.use(require('connect-flash')())
+app.use((req, res, next) => {
+    res.locals.messages = require('express-messages')(req, res)
+    next()
+})
+//express - validator 
+app.use(expressValidator({
+  errorFormatter: function (param, msg, value) {
+    var namespace = param.split('.')
+      , root = namespace.shift()
+      , formParam = root;
+
+    while (namespace.length) {
+      formParam += '[' + namespace.shift() + ']';
+    }
+    return {
+      param: formParam,
+      msg: msg,
+      value: value
+    };
+  }
+}));
 
 // importing routes
 const home = require('./routes/home');
