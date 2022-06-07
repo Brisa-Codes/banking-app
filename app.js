@@ -6,7 +6,7 @@ const passport = require('passport');
 const session = require('express-session');
 const expressValidator = require('express-validator')
 const path = require('path');
-// const logger = require('./logger/logger');
+const logger = require('./logger/logger');
 
 // express
 const app = express();
@@ -26,7 +26,7 @@ mongoose.connect('mongodb://localhost/banking-app');
 const db = mongoose.connection;
 
 db.once('open', () => {
-    console.log('Connected to MongoDB');
+    logger.info('Connected to MongoDB');
 });
 
 db.on('error', (err) => {
@@ -39,7 +39,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true,
 }))
-//express
+//express - messages
 app.use(require('connect-flash')())
 app.use((req, res, next) => {
     res.locals.messages = require('express-messages')(req, res)
@@ -63,7 +63,7 @@ app.use(expressValidator({
   }
 }));
 
-//passport config folder
+//passport config folde
 require('./config/passport')(passport)
 //passport mIDDLEWARES
 app.use(passport.initialize())
@@ -86,8 +86,8 @@ app.use('/', login);
 
 if(!module.parent){
     app.listen(3000, () => {
-        console.log('Server started on port 3000');
+        logger.info('Server started on port 3000');
     });
-};
+}
 
 module.exports = app;
