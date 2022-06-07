@@ -1,15 +1,12 @@
 // modules
+require("dotenv").config();
 const express = require('express');
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const session = require('express-session');
-const flash = require('connect-flash')
 const expressValidator = require('express-validator')
 const path = require('path');
-
-// db configuration
-const config = require('./config/database');
+const logger = require('./logger/logger');
 
 // express
 const app = express();
@@ -29,7 +26,7 @@ mongoose.connect('mongodb://localhost/banking-app');
 const db = mongoose.connection;
 
 db.once('open', () => {
-    console.log('Connected to MongoDB');
+    logger.info('Connected to MongoDB');
 });
 
 db.on('error', (err) => {
@@ -85,6 +82,12 @@ app.use('/', dashboard);
 app.use('/', login);
 
 // server port
-app.listen(3000, () => {
-    console.log('listening on port 3000');
-});
+// const port = process.env.PORT || 5000;
+
+if(!module.parent){
+    app.listen(3000, () => {
+        logger.info('Server started on port 3000');
+    });
+}
+
+module.exports = app;
