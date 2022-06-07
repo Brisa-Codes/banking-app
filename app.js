@@ -39,7 +39,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true,
 }))
-//express - messages
+//express
 app.use(require('connect-flash')())
 app.use((req, res, next) => {
     res.locals.messages = require('express-messages')(req, res)
@@ -63,7 +63,7 @@ app.use(expressValidator({
   }
 }));
 
-//passport config folde
+//passport config folder
 require('./config/passport')(passport)
 //passport mIDDLEWARES
 app.use(passport.initialize())
@@ -88,6 +88,6 @@ if(!module.parent){
     app.listen(3000, () => {
         logger.info('Server started on port 3000');
     });
-}
+};
 
 module.exports = app;
