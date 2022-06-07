@@ -6,7 +6,7 @@ const expect = chai.expect;
 
 chai.use(chaiHttp);
 
-describe('/GET test our APIs ', () => {
+describe('/GET testing APIs ', () => {
 
     // sign up api test
     it('it should GET signup', () => {

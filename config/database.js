@@ -1,5 +1,5 @@
 // database configuration
 // module.exports = {
-//     database: 'DB_URL'
-//     secret: 'banking256'
+//     database: process.env.DB_URL
+//    // secret: 'banking256'
 // }
