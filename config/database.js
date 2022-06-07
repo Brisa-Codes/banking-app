@@ -1,5 +1,5 @@
 // database configuration
-module.exports = {
-    database: 'mongodb://localhost/bankingDB',
-    secret: 'banking256'
-}
+// module.exports = {
+//     database: 'DB_URL'
+//     secret: 'banking256'
+// }

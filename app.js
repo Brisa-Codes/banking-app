@@ -1,7 +1,7 @@
 // modules
 require("dotenv").config();
 const express = require('express');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const passport = require('passport');
 const session = require('express-session');
 const expressValidator = require('express-validator')
@@ -22,16 +22,16 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // database setup
-mongoose.connect('mongodb://localhost/banking-app');
-const db = mongoose.connection;
+// mongoose.connect('mongodb://localhost/banking-app');
+// const db = mongoose.connection;
 
-db.once('open', () => {
-    logger.info('Connected to MongoDB');
-});
+// db.once('open', () => {
+//     logger.info('Connected to MongoDB');
+// });
 
-db.on('error', (err) => {
-    console.log(err);
-});
+// db.on('error', (err) => {
+//     console.log(err);
+// });
 
 //express - session
 app.use(session({
@@ -82,12 +82,12 @@ app.use('/', dashboard);
 app.use('/', login);
 
 // server port
-// const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 6000;
 
 if(!module.parent){
-    app.listen(3000, () => {
-        logger.info('Server started on port 3000');
+    app.listen(PORT, () => {
+        logger.info(`Server started on port ${PORT}`);
     });
-}
+};
 
 module.exports = app;
