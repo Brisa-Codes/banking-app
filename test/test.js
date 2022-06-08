@@ -11,11 +11,11 @@ describe('/GET testing APIs ', () => {
     // sign up api test
     it('it should GET signup', () => {
         chai.request(app)
-            .get('/signup')
-            .end((err, res) => {
-                res.should.have.status(200);
-                res.body.should.be.a('object');
-            });
+        .get('/signup')
+        .end((err, res) => {
+            res.should.have.status(200);
+            res.body.should.be.a('object');
+        });
     });
 
     // login api test
