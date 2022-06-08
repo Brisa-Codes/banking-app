@@ -6,7 +6,6 @@
     "test": "test"
   },
   "scripts": {
-    "build": "node app.js",
     "start": "node app.js",
     "dev": "nodemon app.js",
     "test": "mocha --exit"
